@@ -1,0 +1,121 @@
+[package]
+name = "bitwarden_rs"
+version = "1.0.0"
+authors = ["Daniel García <dani-garcia@users.noreply.github.com>"]
+edition = "2018"
+
+repository = "https://github.com/dani-garcia/bitwarden_rs"
+readme = "README.md"
+license = "GPL-3.0-only"
+publish = false
+build = "build.rs"
+
+[features]
+# Empty to keep compatibility, prefer to set USE_SYSLOG=true
+enable_syslog = []
+mysql = ["diesel/mysql", "diesel_migrations/mysql"]
+postgresql = ["diesel/postgres", "diesel_migrations/postgres", "openssl"]
+sqlite = ["diesel/sqlite", "diesel_migrations/sqlite", "libsqlite3-sys"]
+
+[target."cfg(not(windows))".dependencies]
+syslog = "4.0.1"
+
+[dependencies]
+# Web framework for nightly with a focus on ease-of-use, expressibility, and speed.
+rocket = { version = "0.5.0-dev", features = ["tls"], default-features = false }
+rocket_contrib = "0.5.0-dev"
+
+# HTTP client
+reqwest = "0.9.20"
+
+# multipart/form-data support
+multipart = { version = "0.16.1", features = ["server"], default-features = false }
+
+# WebSockets library
+ws = "0.9.0"
+
+# MessagePack library
+rmpv = "0.4.1"
+
+# Concurrent hashmap implementation
+chashmap = "2.2.2"
+
+# A generic serialization/deserialization framework
+serde = "1.0.101"
+serde_derive = "1.0.101"
+serde_json = "1.0.40"
+
+# Logging
+log = "0.4.8"
+fern = { version = "0.5.8", features = ["syslog-4"] }
+
+# A safe, extensible ORM and Query builder
+diesel = { version = "1.4.2", features = [ "chrono", "r2d2"] }
+diesel_migrations = "1.4.0"
+
+# Bundled SQLite                                           
+libsqlite3-sys = { version = "0.12.0", features = ["bundled"], optional = true }
+
+# Crypto library
+ring = "0.14.6"
+
+# UUID generation
+uuid = { version = "0.7.4", features = ["v4"] }
+
+# Date and time library for Rust
+chrono = "0.4.9"
+
+# TOTP library
+oath = "0.10.2"
+
+# Data encoding library
+data-encoding = "2.1.2"
+
+# JWT library
+jsonwebtoken = "6.0.1"
+
+# U2F library
+u2f = "0.1.6"
+
+# Yubico Library
+yubico = { version = "0.6.1", features = ["online", "online-tokio"], default-features = false }
+
+# A `dotenv` implementation for Rust
+dotenv = { version = "0.14.1", default-features = false }
+
+# Lazy static macro
+lazy_static = "1.4.0"
+
+# More derives
+derive_more = "0.15.0"
+
+# Numerical libraries
+num-traits = "0.2.8"
+num-derive = "0.2.5"
+
+# Email libraries
+lettre = "0.9.2"
+lettre_email = "0.9.2"
+native-tls = "0.2.3"
+quoted_printable = "0.4.1"
+
+# Template library
+handlebars = "2.0.2"
+
+# For favicon extraction from main website
+soup = "0.4.1"
+regex = "1.3.1"
+
+# Required for SSL support for PostgreSQL
+openssl = { version = "0.10.24", optional = true }
+
+# URL encoding library
+percent-encoding = "2.1.0"
+
+[patch.crates-io]
+# Add support for Timestamp type
+rmp = { git = 'https://github.com/3Hren/msgpack-rust', rev = 'd6c6c672e470341207ed9feb69b56322b5597a11' }
+
+# Use newest ring
+rocket = { git = 'https://github.com/SergioBenitez/Rocket', rev = 'dbcb0a75b9556763ac3ab708f40c8f8ed75f1a1e' }
+rocket_contrib = { git = 'https://github.com/SergioBenitez/Rocket', rev = 'dbcb0a75b9556763ac3ab708f40c8f8ed75f1a1e' }
