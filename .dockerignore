@@ -1,0 +1,14 @@
+# Local build artifacts
+target
+
+# Data folder
+data
+
+# IDE files
+.vscode
+.idea
+*.iml
+
+# Documentation
+*.md
+
