@@ -122,7 +122,7 @@ dependencies = [
  "regex 1.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "reqwest 0.9.20 (registry+https://github.com/rust-lang/crates.io-index)",
  "ring 0.14.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "rmpv 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rmpv 0.4.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "rocket 0.5.0-dev (git+https://github.com/SergioBenitez/Rocket?rev=dbcb0a75b9556763ac3ab708f40c8f8ed75f1a1e)",
  "rocket_contrib 0.5.0-dev (git+https://github.com/SergioBenitez/Rocket?rev=dbcb0a75b9556763ac3ab708f40c8f8ed75f1a1e)",
  "serde 1.0.101 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1999,7 +1999,7 @@ dependencies = [
 
 [[package]]
 name = "rmpv"
-version = "0.4.1"
+version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "num-traits 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3141,7 +3141,7 @@ dependencies = [
 "checksum reqwest 0.9.20 (registry+https://github.com/rust-lang/crates.io-index)" = "0f6d896143a583047512e59ac54a215cb203c29cc941917343edea3be8df9c78"
 "checksum ring 0.14.6 (registry+https://github.com/rust-lang/crates.io-index)" = "426bc186e3e95cac1e4a4be125a4aca7e84c2d616ffc02244eef36e2a60a093c"
 "checksum rmp 0.8.8 (git+https://github.com/3Hren/msgpack-rust?rev=d6c6c672e470341207ed9feb69b56322b5597a11)" = "<none>"
-"checksum rmpv 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)" = "4d496d53fa3da952801d1a0b681f6eeb5147ca69a5299c193450e94f452ed835"
+"checksum rmpv 0.4.2 (registry+https://github.com/rust-lang/crates.io-index)" = "83caf745acbd99179ab6ce95398ddf548edfa2d3a99ff195248b30cd1524c43f"
 "checksum rocket 0.5.0-dev (git+https://github.com/SergioBenitez/Rocket?rev=dbcb0a75b9556763ac3ab708f40c8f8ed75f1a1e)" = "<none>"
 "checksum rocket_codegen 0.5.0-dev (git+https://github.com/SergioBenitez/Rocket?rev=dbcb0a75b9556763ac3ab708f40c8f8ed75f1a1e)" = "<none>"
 "checksum rocket_contrib 0.5.0-dev (git+https://github.com/SergioBenitez/Rocket?rev=dbcb0a75b9556763ac3ab708f40c8f8ed75f1a1e)" = "<none>"

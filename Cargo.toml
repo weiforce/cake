@@ -35,7 +35,7 @@ multipart = { version = "0.16.1", features = ["server"], default-features = fals
 ws = "0.9.0"
 
 # MessagePack library
-rmpv = "0.4.1"
+rmpv = "0.4.2"
 
 # Concurrent hashmap implementation
 chashmap = "2.2.2"
