@@ -50,7 +50,7 @@ log = "0.4.8"
 fern = { version = "0.5.8", features = ["syslog-4"] }
 
 # A safe, extensible ORM and Query builder
-diesel = { version = "1.4.2", features = [ "chrono", "r2d2"] }
+diesel = { version = "1.4.6", features = [ "chrono", "r2d2"] }
 diesel_migrations = "1.4.0"
 
 # Bundled SQLite                                           
